@@ -43,7 +43,7 @@ const Register = () => {
     let regobj = { id, password, email };
     if (IsValidate()) {
       console.log(regobj);
-      fetch("https://my-json-server.typicode.com/nofrialdi/revou-members-data/users", {
+      fetch("https://idyllic-seahorse-9905a8.netlify.app/users.json", {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify(regobj),
