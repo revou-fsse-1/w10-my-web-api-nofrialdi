@@ -12,7 +12,7 @@ const Editmember = () => {
         return res.json();
       })
       .then((resp) => {
-        idchange(resp.id);
+        // idchange(resp.id);
         namechange(resp.name);
         emailchange(resp.email);
         phonechange(resp.phone);
