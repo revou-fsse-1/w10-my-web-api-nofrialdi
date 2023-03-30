@@ -23,7 +23,6 @@ const Editmember = () => {
       });
   }, []);
 
-  const [memberid, idchange] = useState("");
   const [name, namechange] = useState("");
   const [email, emailchange] = useState("");
   const [phone, phonechange] = useState("");
