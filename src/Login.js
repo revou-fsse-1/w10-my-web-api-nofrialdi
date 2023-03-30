@@ -6,18 +6,29 @@ const Login = () => {
   const [id, idupdate] = useState("");
   const [password, passwordupdate] = useState("");
 
+  // const [userlist, userupdate] = useState([]);
+
   const usenavigate = useNavigate();
 
   useEffect(() => {
     sessionStorage.clear();
   }, []);
 
+  // useEffect(() => {
+  //   fetch("https://my-json-server.typicode.com/nofrialdi/revou-members-data/users/", { method: "GET" })
+  //     .then((res) => res.json())
+  //     .then((res) => {
+  //       userupdate(res);
+  //       console.log(res);
+  //     });
+  // }, []);
+
   const ProceedLogin = (e) => {
     e.preventDefault();
     if (validate()) {
       ///implentation
       // console.log('proceed');
-      fetch("https://my-json-server.typicode.com/nofrialdi/revou-members-data/users" + id)
+      fetch("https://my-json-server.typicode.com/nofrialdi/revou-members-data/users/" + id, { method: "POST" })
         .then((res) => {
           return res.json();
         })
