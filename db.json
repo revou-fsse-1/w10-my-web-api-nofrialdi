@@ -18,13 +18,6 @@
   ],
   "members": [
     {
-      "id": 0,
-      "name": "Nofrialdi",
-      "email": "nofri@gmail.com",
-      "phone": "089612022458",
-      "status": "student"
-    },
-    {
       "id": 1,
       "name": "Angeline Widjaja",
       "email": "angeline@gmail.com",
@@ -36,21 +29,21 @@
       "name": "Okky Anggoro",
       "email": "okky@gmail.com",
       "phone": "-",
-      "status": "student"
+      "status": "Student"
     },
     {
       "id": 3,
       "name": "Mesel Ghea",
       "email": "mesel@gmail.com",
       "phone": "-",
-      "status": "student"
+      "status": "Student"
     },
     {
       "id": 4,
       "name": "Adhi Wiranata Prasetyo",
       "email": "adhi@gmail.com",
       "phone": "-",
-      "status": "instructor"
+      "status": "Instructor"
     }
   ]
 }

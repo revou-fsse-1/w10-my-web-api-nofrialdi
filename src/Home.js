@@ -49,7 +49,8 @@ const Home = () => {
         .then((res) => {
           // toast.success("Success Remove Data");
           alert("Removed successfully.");
-          window.location.reload();
+          // window.location.reload();
+          usenavigate("/home");
         })
         .catch((err) => {
           console.log(err.message);
