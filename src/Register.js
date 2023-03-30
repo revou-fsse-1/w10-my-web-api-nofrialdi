@@ -43,7 +43,7 @@ const Register = () => {
     let regobj = { id, password, email };
     if (IsValidate()) {
       console.log(regobj);
-      fetch("http://localhost:8000/users", {
+      fetch("https://my-json-server.typicode.com/nofrialdi/revou-members-data/users", {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify(regobj),
