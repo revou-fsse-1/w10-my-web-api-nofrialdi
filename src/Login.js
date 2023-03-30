@@ -28,7 +28,7 @@ const Login = () => {
     if (validate()) {
       ///implentation
       // console.log('proceed');
-      fetch("https://my-json-server.typicode.com/nofrialdi/revou-members-data/users/" + id, { method: "POST" })
+      fetch("https://my-json-server.typicode.com/nofrialdi/revou-members-data/users/" + id)
         .then((res) => {
           return res.json();
         })
