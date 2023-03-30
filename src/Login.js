@@ -17,7 +17,7 @@ const Login = () => {
     if (validate()) {
       ///implentation
       // console.log('proceed');
-      fetch("http://localhost:8000/users/" + id)
+      fetch("https://my-json-server.typicode.com/nofrialdi/revou-members-data/users" + id)
         .then((res) => {
           return res.json();
         })
