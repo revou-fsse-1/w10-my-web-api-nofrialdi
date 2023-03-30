@@ -15,7 +15,7 @@ const Addmember = () => {
       showmenuupdateupdate(true);
       let id = sessionStorage.getItem("id");
       if (id === "" || id === null) {
-        usenavigate("/");
+        usenavigate("/login");
       } else {
         displayidupdate(id);
       }
