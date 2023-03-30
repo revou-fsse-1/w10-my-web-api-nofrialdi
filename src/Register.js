@@ -72,7 +72,7 @@ const Register = () => {
                     <label>
                       User Id <span className="errmsg">*</span>
                     </label>
-                    <input value={id} onChange={(e) => idchange(e.target.value)} className="form-control"></input>
+                    <input name="id" value={id} onChange={(e) => idchange(e.target.value)} className="form-control"></input>
                   </div>
                 </div>
                 <div className="col-lg-12">
@@ -80,7 +80,7 @@ const Register = () => {
                     <label>
                       Email <span className="errmsg">*</span>
                     </label>
-                    <input value={email} onChange={(e) => emailchange(e.target.value)} className="form-control"></input>
+                    <input name="email" value={email} onChange={(e) => emailchange(e.target.value)} className="form-control"></input>
                   </div>
                 </div>
                 <div className="col-lg-12">
@@ -88,7 +88,7 @@ const Register = () => {
                     <label>
                       Password <span className="errmsg">*</span>
                     </label>
-                    <input value={password} onChange={(e) => passwordchange(e.target.value)} type="password" className="form-control"></input>
+                    <input name="password" value={password} onChange={(e) => passwordchange(e.target.value)} type="password" className="form-control"></input>
                   </div>
                 </div>
               </div>
