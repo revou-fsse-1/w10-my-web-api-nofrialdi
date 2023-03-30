@@ -1,0 +1,56 @@
+{
+  "users": [
+    {
+      "id": "admin",
+      "password": "admin123",
+      "email": "admin@gmail.com"
+    },
+    {
+      "id": "aldi31193",
+      "password": "aldi123",
+      "email": "aldi@gmail.com"
+    },
+    {
+      "id": "nofri31193",
+      "password": "aldi31193",
+      "email": "aldi@gmail.com"
+    }
+  ],
+  "members": [
+    {
+      "id": 0,
+      "name": "Nofrialdi",
+      "email": "nofri@gmail.com",
+      "phone": "089612022458",
+      "status": "student"
+    },
+    {
+      "id": 1,
+      "name": "Angeline Widjaja",
+      "email": "angeline@gmail.com",
+      "phone": "-",
+      "status": "Team Leader"
+    },
+    {
+      "id": 2,
+      "name": "Okky Anggoro",
+      "email": "okky@gmail.com",
+      "phone": "-",
+      "status": "student"
+    },
+    {
+      "id": 3,
+      "name": "Mesel Ghea",
+      "email": "mesel@gmail.com",
+      "phone": "-",
+      "status": "student"
+    },
+    {
+      "id": 4,
+      "name": "Adhi Wiranata Prasetyo",
+      "email": "adhi@gmail.com",
+      "phone": "-",
+      "status": "instructor"
+    }
+  ]
+}
