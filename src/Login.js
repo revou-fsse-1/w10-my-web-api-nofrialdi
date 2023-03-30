@@ -81,7 +81,7 @@ const Login = () => {
               </button>{" "}
               |
               <Link className="btn btn-success" to={"/register"}>
-                New User
+                Register
               </Link>
             </div>
           </div>

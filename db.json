@@ -14,6 +14,11 @@
       "id": "nofri31193",
       "password": "aldi31193",
       "email": "aldi@gmail.com"
+    },
+    {
+      "id": "admin1",
+      "password": "admin1",
+      "email": "admin1@gmail.com"
     }
   ],
   "members": [
@@ -44,6 +49,13 @@
       "email": "adhi@gmail.com",
       "phone": "-",
       "status": "Instructor"
+    },
+    {
+      "id": 5,
+      "name": "Nofrialdi",
+      "email": "nofri@gmail.com",
+      "phone": "089612022458",
+      "status": "Student"
     }
   ]
 }
