@@ -14,21 +14,12 @@ const Login = () => {
     sessionStorage.clear();
   }, []);
 
-  // useEffect(() => {
-  //   fetch("https://my-json-server.typicode.com/nofrialdi/revou-members-data/users/", { method: "GET" })
-  //     .then((res) => res.json())
-  //     .then((res) => {
-  //       userupdate(res);
-  //       console.log(res);
-  //     });
-  // }, []);
-
   const ProceedLogin = (e) => {
     e.preventDefault();
     if (validate()) {
       ///implentation
       // console.log('proceed');
-      fetch("https://6422cfe5001cb9fc20307a5e.mockapi.io/users" + id)
+      fetch("https://6422cfe5001cb9fc20307a5e.mockapi.io/users" + username)
         .then((res) => {
           return res.json();
         })
@@ -39,7 +30,7 @@ const Login = () => {
           } else {
             if (resp.password === password) {
               toast.success("Success");
-              sessionStorage.setItem("id", id);
+              sessionStorage.setItem("username", username);
               usenavigate("/home");
             } else {
               toast.error("Please Enter valid credentials");
@@ -56,7 +47,7 @@ const Login = () => {
     let result = true;
     if (username === "" || username === null) {
       result = false;
-      toast.warning("Please Enter UserId");
+      toast.warning("Please Enter Username");
     }
     if (password === "" || password === null) {
       result = false;
