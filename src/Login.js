@@ -68,13 +68,13 @@ const Login = () => {
                 <label>
                   Username <span className="errmsg">*</span>
                 </label>
-                <input value={id} onChange={(e) => idupdate(e.target.value)} className="form-control"></input>
+                <input name="id" value={id} onChange={(e) => idupdate(e.target.value)} className="form-control"></input>
               </div>
               <div className="form-group">
                 <label>
                   Password <span className="errmsg">*</span>
                 </label>
-                <input type="password" value={password} onChange={(e) => passwordupdate(e.target.value)} className="form-control"></input>
+                <input name="password" type="password" value={password} onChange={(e) => passwordupdate(e.target.value)} className="form-control"></input>
               </div>
             </div>
             <div className="card-footer">
