@@ -3,7 +3,6 @@ import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const Login = () => {
-  const [id, idupdate] = useState("");
   const [username, usernameupdate] = useState("");
   const [password, passwordupdate] = useState("");
 
@@ -15,19 +14,48 @@ const Login = () => {
     sessionStorage.clear();
   }, []);
 
+  // const ProceedLogin = (e) => {
+  //   e.preventDefault();
+  //   if (validate()) {
+  //     ///implentation
+  //     // console.log('proceed');
+  //     fetch("https://6422cfe5001cb9fc20307a5e.mockapi.io/users/" + id)
+  //       .then((res) => {
+  //         return res.json();
+  //       })
+  //       .then((resp) => {
+  //         console.log(resp);
+  //         if (Object.keys(resp).length === 0) {
+  //           toast.error("Please Enter valid userid");
+  //         } else {
+  //           if (resp.password === password) {
+  //             toast.success("Success");
+  //             sessionStorage.setItem("username", username);
+  //             usenavigate("/home");
+  //           } else {
+  //             toast.error("Please Enter valid credentials");
+  //           }
+  //         }
+  //       })
+  //       .catch((err) => {
+  //         toast.error("Login Failed due to :" + err.message);
+  //       });
+  //   }
+  // };
+
   const ProceedLogin = (e) => {
     e.preventDefault();
     if (validate()) {
       ///implentation
       // console.log('proceed');
-      fetch("https://6422cfe5001cb9fc20307a5e.mockapi.io/users/" + id)
+      fetch("https://6422cfe5001cb9fc20307a5e.mockapi.io/users" + username)
         .then((res) => {
           return res.json();
         })
         .then((resp) => {
-          console.log(resp);
+          //console.log(resp)
           if (Object.keys(resp).length === 0) {
-            toast.error("Please Enter valid userid");
+            toast.error("Please Enter valid username");
           } else {
             if (resp.password === password) {
               toast.success("Success");
