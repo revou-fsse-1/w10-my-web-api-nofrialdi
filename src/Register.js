@@ -3,7 +3,6 @@ import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const Register = () => {
-  const [id, idchange] = useState("");
   const [password, passwordchange] = useState("");
   const [email, emailchange] = useState("");
   const [username, usernamechange] = useState("");
@@ -13,10 +12,6 @@ const Register = () => {
   const IsValidate = () => {
     let isproceed = true;
     let errormessage = "Please enter the value in ";
-    if (id === null || id === "") {
-      isproceed = false;
-      errormessage += " userid";
-    }
 
     if (username === null || username === "") {
       isproceed = false;
@@ -76,7 +71,7 @@ const Register = () => {
                 <div className="col-lg-12">
                   <div className="form-group">
                     <label>
-                      User Id <span className="errmsg">*</span>
+                      Username <span className="errmsg">*</span>
                     </label>
                     <input name="username" value={username} onChange={(e) => usernamechange(e.target.value)} className="form-control"></input>
                   </div>
