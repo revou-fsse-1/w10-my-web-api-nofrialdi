@@ -43,7 +43,7 @@ const Register = () => {
     let regobj = { id, password, email };
     if (IsValidate()) {
       console.log(regobj);
-      fetch("https://idyllic-seahorse-9905a8.netlify.app/users.json", {
+      fetch("https://glamorous-boa-robe.cyclic.app/users", {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify(regobj),
