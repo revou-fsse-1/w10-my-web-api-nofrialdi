@@ -41,7 +41,7 @@ const Register = () => {
 
   const handlesubmit = (e) => {
     e.preventDefault();
-    let regobj = { id, username, password, email };
+    let regobj = { username, password, email };
     if (IsValidate()) {
       console.log(regobj);
       fetch("https://6422cfe5001cb9fc20307a5e.mockapi.io/users", {
