@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const Login = () => {
+  const [id, idupdate] = useState("");
   const [username, usernameupdate] = useState("");
   const [password, passwordupdate] = useState("");
 
@@ -19,7 +20,7 @@ const Login = () => {
     if (validate()) {
       ///implentation
       // console.log('proceed');
-      fetch("https://6422cfe5001cb9fc20307a5e.mockapi.io/users" + username)
+      fetch("https://6422cfe5001cb9fc20307a5e.mockapi.io/users/" + id)
         .then((res) => {
           return res.json();
         })
