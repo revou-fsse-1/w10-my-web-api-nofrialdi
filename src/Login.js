@@ -19,7 +19,7 @@ const Login = () => {
     if (validate()) {
       ///implentation
       // console.log('proceed');
-      fetch("https://6422cfe5001cb9fc20307a5e.mockapi.io/users" + id)
+      fetch("https://6422cfe5001cb9fc20307a5e.mockapi.io/users/" + id)
         .then((res) => {
           return res.json();
         })
