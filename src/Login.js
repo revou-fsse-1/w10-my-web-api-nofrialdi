@@ -3,10 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const Login = () => {
-  const [id, idupdate] = useState("");
+  const [username, usernameupdate] = useState("");
   const [password, passwordupdate] = useState("");
-
-  // const [userlist, userupdate] = useState([]);
 
   const usenavigate = useNavigate();
 
@@ -19,7 +17,7 @@ const Login = () => {
     if (validate()) {
       ///implentation
       // console.log('proceed');
-      fetch("https://6422cfe5001cb9fc20307a5e.mockapi.io/users/" + id)
+      fetch("https://6422cfe5001cb9fc20307a5e.mockapi.io/users/" + username)
         .then((res) => {
           return res.json();
         })
@@ -30,7 +28,7 @@ const Login = () => {
           } else {
             if (resp.password === password) {
               toast.success("Success");
-              sessionStorage.setItem("id", id);
+              sessionStorage.setItem("username", username);
               usenavigate("/home");
             } else {
               toast.error("Please Enter valid credentials");
@@ -45,9 +43,9 @@ const Login = () => {
 
   const validate = () => {
     let result = true;
-    if (id === "" || id === null) {
+    if (username === "" || username === null) {
       result = false;
-      toast.warning("Please Enter id");
+      toast.warning("Please Enter username");
     }
     if (password === "" || password === null) {
       result = false;
@@ -68,7 +66,7 @@ const Login = () => {
                 <label>
                   Username <span className="errmsg">*</span>
                 </label>
-                <input name="id" value={id} onChange={(e) => idupdate(e.target.value)} className="form-control"></input>
+                <input name="username" value={id} onChange={(e) => usernameupdate(e.target.value)} className="form-control"></input>
               </div>
               <div className="form-group">
                 <label>
@@ -80,7 +78,7 @@ const Login = () => {
             <div className="card-footer">
               <button type="submit" className="btn btn-primary">
                 Login
-              </button>{" "}
+              </button>
               |
               <Link className="btn btn-success" to={"/register"}>
                 Register
