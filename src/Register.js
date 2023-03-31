@@ -3,18 +3,24 @@ import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const Register = () => {
-  const [username, usernamechange] = useState("");
+  const [id, idchange] = useState("");
   const [password, passwordchange] = useState("");
   const [email, emailchange] = useState("");
+  const [username, usernamechange] = useState("");
 
   const navigate = useNavigate();
 
   const IsValidate = () => {
     let isproceed = true;
     let errormessage = "Please enter the value in ";
+    if (id === null || id === "") {
+      isproceed = false;
+      errormessage += " userid";
+    }
+
     if (username === null || username === "") {
       isproceed = false;
-      errormessage += " username";
+      errormessage += " Username";
     }
 
     if (password === null || password === "") {
@@ -40,7 +46,7 @@ const Register = () => {
 
   const handlesubmit = (e) => {
     e.preventDefault();
-    let regobj = { id, password, email };
+    let regobj = { id, username, password, email };
     if (IsValidate()) {
       console.log(regobj);
       fetch("https://6422cfe5001cb9fc20307a5e.mockapi.io/users", {
@@ -72,7 +78,7 @@ const Register = () => {
                     <label>
                       User Id <span className="errmsg">*</span>
                     </label>
-                    <input name="username" value={id} onChange={(e) => usernamechange(e.target.value)} className="form-control"></input>
+                    <input name="id" value={username} onChange={(e) => idchange(e.target.value)} className="form-control"></input>
                   </div>
                 </div>
                 <div className="col-lg-12">
