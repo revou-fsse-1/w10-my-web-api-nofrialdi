@@ -78,7 +78,7 @@ const Register = () => {
                     <label>
                       User Id <span className="errmsg">*</span>
                     </label>
-                    <input name="id" value={username} onChange={(e) => idchange(e.target.value)} className="form-control"></input>
+                    <input name="username" value={username} onChange={(e) => idchange(e.target.value)} className="form-control"></input>
                   </div>
                 </div>
                 <div className="col-lg-12">
