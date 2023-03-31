@@ -19,6 +19,26 @@
       "id": "admin1",
       "password": "admin1",
       "email": "admin1@gmail.com"
+    },
+    {
+      "id": "admin2",
+      "password": "admin2",
+      "email": "admin2@gmail.com"
+    },
+    {
+      "id": "admin45",
+      "password": "admin45",
+      "email": "admin45@gmail.com"
+    },
+    {
+      "id": "aldi",
+      "password": "aldi123",
+      "email": "nofri@gmail.com"
+    },
+    {
+      "id": "coba",
+      "password": "coba",
+      "email": "coba@gmail.com"
     }
   ],
   "members": [

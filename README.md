@@ -2,10 +2,6 @@
 
 > Assignment for My Web API Project
 
-## :link: Links & URLs
-
-[https://fsse-revou-member.nofri.xyz/](https://fsse-revou-member.nofri.xyz/)
-
 ## :construction: Tech Stack:
 
 [![](https://skillicons.dev/icons?i=git,github,vscode,html,css,javascript,nodejs,react,bootstrap,netlify,postman)]()

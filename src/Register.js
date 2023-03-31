@@ -3,19 +3,18 @@ import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const Register = () => {
+  const [id, idchange] = useState("");
   const [password, passwordchange] = useState("");
   const [email, emailchange] = useState("");
-  const [username, usernamechange] = useState("");
 
   const navigate = useNavigate();
 
   const IsValidate = () => {
     let isproceed = true;
     let errormessage = "Please enter the value in ";
-
-    if (username === null || username === "") {
+    if (id === null || id === "") {
       isproceed = false;
-      errormessage += " Username";
+      errormessage += " userid";
     }
 
     if (password === null || password === "") {
@@ -41,10 +40,10 @@ const Register = () => {
 
   const handlesubmit = (e) => {
     e.preventDefault();
-    let regobj = { username, password, email };
+    let regobj = { id, password, email };
     if (IsValidate()) {
       console.log(regobj);
-      fetch("https://6422cfe5001cb9fc20307a5e.mockapi.io/users", {
+      fetch("http://localhost:8000/users", {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify(regobj),
@@ -71,9 +70,9 @@ const Register = () => {
                 <div className="col-lg-12">
                   <div className="form-group">
                     <label>
-                      Username <span className="errmsg">*</span>
+                      User Id <span className="errmsg">*</span>
                     </label>
-                    <input name="username" value={username} onChange={(e) => usernamechange(e.target.value)} className="form-control"></input>
+                    <input value={id} onChange={(e) => idchange(e.target.value)} className="form-control"></input>
                   </div>
                 </div>
                 <div className="col-lg-12">
@@ -81,7 +80,7 @@ const Register = () => {
                     <label>
                       Email <span className="errmsg">*</span>
                     </label>
-                    <input name="email" value={email} onChange={(e) => emailchange(e.target.value)} className="form-control"></input>
+                    <input value={email} onChange={(e) => emailchange(e.target.value)} className="form-control"></input>
                   </div>
                 </div>
                 <div className="col-lg-12">
@@ -89,7 +88,7 @@ const Register = () => {
                     <label>
                       Password <span className="errmsg">*</span>
                     </label>
-                    <input name="password" value={password} onChange={(e) => passwordchange(e.target.value)} type="password" className="form-control"></input>
+                    <input value={password} onChange={(e) => passwordchange(e.target.value)} type="password" className="form-control"></input>
                   </div>
                 </div>
               </div>
