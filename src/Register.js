@@ -43,7 +43,7 @@ const Register = () => {
     let regobj = { id, password, email };
     if (IsValidate()) {
       console.log(regobj);
-      fetch("https://glamorous-boa-robe.cyclic.app/users", {
+      fetch("https://6422cfe5001cb9fc20307a5e.mockapi.io/users", {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify(regobj),
