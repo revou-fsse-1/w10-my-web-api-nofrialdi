@@ -15,6 +15,36 @@ Access the documentation link at: [API Documentation Link](https://documenter.ge
 - [Edit member](http://localhost:3000/member/edit/1)
 - [Detail member](http://localhost:3000/member/detail/1)
 
+## Installation
+
+To install the application, follow these steps:
+
+Clone the repository: `git clone https://github.com/revou-fsse-1/w10-my-web-api-nofrialdi.git `
+
+Install the dependencies: `npm install`
+
+## Usage
+
+To use the application, run the following command:
+
+1. Install json-server globally:
+
+```sh
+npm install -g json-server
+```
+
+2. Run the json-server:
+
+```sh
+json-server  --watch db.json --port 8000
+```
+
+3. Run apps:
+
+```sh
+> npm start
+```
+
 ## :construction: Tech Stack:
 
 [![](https://skillicons.dev/icons?i=git,github,vscode,html,css,javascript,nodejs,react,bootstrap,netlify,postman)]()
