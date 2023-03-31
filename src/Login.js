@@ -66,7 +66,7 @@ const Login = () => {
                 <label>
                   Username <span className="errmsg">*</span>
                 </label>
-                <input name="username" value={id} onChange={(e) => usernameupdate(e.target.value)} className="form-control"></input>
+                <input name="username" value={username} onChange={(e) => usernameupdate(e.target.value)} className="form-control"></input>
               </div>
               <div className="form-group">
                 <label>
