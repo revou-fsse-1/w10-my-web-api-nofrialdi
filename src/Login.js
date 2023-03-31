@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const Login = () => {
-  const [id, idupdate] = useState("");
+  const [username, usernameupdate] = useState("");
   const [password, passwordupdate] = useState("");
 
   // const [userlist, userupdate] = useState([]);
@@ -28,7 +28,7 @@ const Login = () => {
     if (validate()) {
       ///implentation
       // console.log('proceed');
-      fetch("https://my-json-server.typicode.com/nofrialdi/revou-members-data/users/" + id)
+      fetch("https://6422cfe5001cb9fc20307a5e.mockapi.io/users" + id)
         .then((res) => {
           return res.json();
         })
@@ -54,7 +54,7 @@ const Login = () => {
 
   const validate = () => {
     let result = true;
-    if (id === "" || id === null) {
+    if (username === "" || username === null) {
       result = false;
       toast.warning("Please Enter UserId");
     }
@@ -75,9 +75,9 @@ const Login = () => {
             <div className="card-body">
               <div className="form-group">
                 <label>
-                  User Id <span className="errmsg">*</span>
+                  Username <span className="errmsg">*</span>
                 </label>
-                <input value={id} onChange={(e) => idupdate(e.target.value)} className="form-control"></input>
+                <input value={username} onChange={(e) => usernameupdate(e.target.value)} className="form-control"></input>
               </div>
               <div className="form-group">
                 <label>
